@@ -1,0 +1,46 @@
+---
+import EducationItem from "./EducationItem.astro"
+
+const EDUCATION = [
+  {
+    date: "2023 - 2024",
+    title: "Máster en Desarrollo Web",
+    institution: "Universidad de Tecnología",
+    degree: "Máster Oficial",
+    description: "Especialización en tecnologías modernas de desarrollo web, incluyendo frameworks frontend y backend, arquitecturas de microservicios y DevOps.",
+    grade: "9.2/10",
+    link: "https://universidad.com/certificado",
+  },
+  {
+    date: "2019 - 2023",
+    title: "Grado en Ingeniería Informática",
+    institution: "Universidad Politécnica",
+    degree: "Grado Universitario",
+    description: "Formación integral en ciencias de la computación, programación, bases de datos, redes y sistemas operativos. Especialización en desarrollo de software.",
+    grade: "8.7/10",
+    link: "https://universidad.com/certificado",
+  },
+  {
+    date: "2021",
+    title: "Certificación AWS Solutions Architect",
+    institution: "Amazon Web Services",
+    description: "Certificación profesional en diseño y despliegue de sistemas escalables en AWS. Cobertura completa de servicios cloud y mejores prácticas.",
+  },
+  {
+    date: "2020",
+    title: "React Developer Certification",
+    institution: "Meta (Facebook)",
+    description: "Certificación oficial en desarrollo con React.js, incluyendo hooks, context, testing y optimización de rendimiento.",
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EDUCATION.map((education) => (
+      <li class="">
+        <EducationItem {...education} />
+      </li>
+    ))
+  }
+</ol>
