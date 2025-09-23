@@ -1,6 +1,16 @@
 ---
+import FastAPI from "./icons/FastAPI.astro"
 import GitHub from "./icons/GitHub.astro"
 import NextJS from "./icons/NextJS.astro"
+import PostGIS from "./icons/PostGIS.astro"
+import Flask from "./icons/Flask.astro"
+import MySQL from "./icons/MySQL.astro"
+import Docker from "./icons/Docker.astro"
+import Streamlit from "./icons/Streamlit.astro"
+import WordPress from "./icons/WordPress.astro"
+import HtmlCss from "./icons/HtmlCss.astro"
+import PyQGIS from "./icons/PyQGIS.astro"
+import Python from "./icons/Python.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
@@ -16,24 +26,98 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+  PYTHON: {
+    name: "Python",
+    class: "bg-[#3776ab] text-white",
+    icon: Python,
+  },
+  FASTAPI: {
+    name: "FastAPI",
+    class: "bg-[#009688] text-white",
+    icon: FastAPI,
+  },
+  POSTGIS: {
+    name: "PostGIS",
+    class: "bg-[#336791] text-white",
+    icon: PostGIS,
+  },
+  PYQGIS: {
+    name: "PyQGIS",
+    class: "bg-[#93c47d] text-white",
+    icon: PyQGIS,
+  },
+  FLASK: {
+    name: "Flask",
+    class: "bg-[#000000] text-white",
+    icon: Flask,
+  },
+  MYSQL: {
+    name: "MySQL",
+    class: "bg-[#00758f] text-white",
+    icon: MySQL,
+  },
+  DOCKER: {
+    name: "Docker",
+    class: "bg-[#0db7ed] text-white",
+    icon: Docker,
+  },
+  STREAMLIT: {
+    name: "Streamlit",
+    class: "bg-[#ff4b4b] text-white",
+    icon: Streamlit,
+  },
+  WORDPRESS: {
+    name: "WordPress",
+    class: "bg-[#21759b] text-white",
+    icon: WordPress,
+  },
+  HTMLCSS: {
+    name: "HTML/CSS",
+    class: "bg-[#e44d26] text-white",
+    icon: HtmlCss,
+  },
 }
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "Playas Limpias - Plataforma geoespacial para gestión ambiental",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Sistema para identificar responsabilidades en la limpieza de playas afectadas por residuos acuícolas. Tecnología geoespacial moderna y backend robusto.",
+    github: "https://github.com/Traukit0/playas-limpias",
+    image: "/projects/playas_limpias.webp",
+    tags: [TAGS.PYTHON, TAGS.FASTAPI, TAGS.POSTGIS],
+    link: undefined,
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "QGIS Plugin - Análisis INFA - Herramienta oficial en uso por SERNAPESCA",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Plugin de QGIS para análisis remoto de inspecciones ambientales en centros de cultivo. Utilizado institucionalmente por el equipo ambiental de SERNAPESCA.",
+    github: "https://github.com/Traukit0/analisis_infa",
+    image: "/projects/plugin_infa.webp",
+    tags: [TAGS.PYTHON, TAGS.PYQGIS],
+  },
+  {
+    title: "AcuiGestor - Sistema de gestión de inspecciones acuícolas",
+    description:
+      "Plataforma en desarrollo para registrar y visualizar fiscalizaciones a centros de cultivo. Arquitectura moderna y basada en contenedores.",
+    github: "https://github.com/Traukit0/CONSULTA-CENTROS",
+    image: "/projects/acuigestor.webp",
+    tags: [TAGS.FLASK, TAGS.MYSQL, TAGS.DOCKER],
+  },
+  {
+    title: "IMG to KMZ - Visualización rápida de fotos georreferenciadas",
+    description:
+      "App para convertir imágenes con coordenadas en archivos KMZ compatibles con Google Earth.",
+    github: "https://github.com/Traukit0/img-to-kmz",
+    image: "/projects/imgtokmz.webp",
+    tags: [TAGS.PYTHON, TAGS.STREAMLIT],
+  },
+  {
+    title: "Sitio Web Asociación COFRA - Diseño y mantenimiento de sitio institucional",
+    description:
+      "Planificación, ejecución y soporte del sitio web de la Asociación de Funcionarios de SERNAPESCA. Implementado con WordPress y Elementor, actualmente en línea.",
+    link: "https://www.cofraloslagos.cl/",
+    image: "/projects/cofra.webp",
+    tags: [TAGS.WORDPRESS, TAGS.HTMLCSS],
   },
 ]
 ---
@@ -57,10 +141,10 @@ const PROJECTS = [
           {tags.map((tag) => (
             <li>
               <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                class={`flex items-center gap-x-1.5 rounded-full text-xs ${tag.class} py-1 px-2 `}
               >
-                <tag.icon class="size-4" />
-                {tag.name}
+                <tag.icon class="size-4 shrink-0" />
+                <span class="leading-none translate-y-[0.5px]">{tag.name}</span>
               </span>
             </li>
           ))}
