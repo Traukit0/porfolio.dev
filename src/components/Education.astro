@@ -1,0 +1,65 @@
+---
+import EducationItem from "./EducationItem.astro"
+
+const EDUCATION = [
+  {
+    date: "2025",
+    title: "Ingeniería en Informática",
+    institution: "Universidad Andrés Bello",
+    description: "Formación en bases de datos, programación y desarrollo de software.",
+    link: "https://universidad.com/certificado",
+  },
+  {
+    date: "2010",
+    title: "Ingeniería en Acuicultura",
+    institution: "DuocUC",
+    description: "Formación profesional en el área productiva y ambiental de la acuicultura.",
+    link: "https://certificadovalida.duoc.cl/ValidacionQr?id=1227122246",
+  },
+  {
+    date: "2022 - 2023",
+    title: "Python for Everybody / Python 3 Programming",
+    institution: "University of Michigan – Coursera",
+    description: "Dominio de estructuras de datos, lógica y programación con Python.",
+    link: "https://coursera.org/verify/specialization/WD364XQ6QTYD",
+  },
+  {
+    date: "2022",
+    title: "GIS – Geographic Information Systems",
+    institution: "University of California Davis – Coursera",
+    description: "Fundamentos y aplicaciones prácticas de sistemas de información geográfica.",
+    link: "https://coursera.org/verify/specialization/PK2YP39BWGRH",
+  },
+  {
+    date: "2025",
+    title: "IBM Data Analyst Specialization",
+    institution: "IBM – Coursera",
+    description: "Herramientas de análisis de datos, SQL, visualización y gestión de bases de datos.",
+    link: "https://coursera.org/verify/professional-cert/ECQT1JMXPK4P",
+  },
+  {
+    date: "2025",
+    title: "IBM AI Developer",
+    institution: "IBM – Coursera",
+    description: "Especialización en desarrollo de soluciones basadas en inteligencia artificial.",
+    link: "https://coursera.org/verify/professional-cert/BTSR2XTKYMBY",
+  },
+  {
+    date: "2025",
+    title: "Diseño y Gestión Ágil de Proyectos",
+    institution: "Fundación Telefónica - SENCE - Universidad de Playa Ancha",
+    description: "Diplomando en diseño y gestión ágil de proyectos.",
+    link: "/documents/Diplomado - Certificado UPLA.pdf",
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EDUCATION.map((education) => (
+      <li class="">
+        <EducationItem {...education} />
+      </li>
+    ))
+  }
+</ol>
