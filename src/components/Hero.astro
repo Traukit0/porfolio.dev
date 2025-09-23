@@ -1,6 +1,8 @@
 ---
 const personalImageAlt = "Miguel Ángel"
 import Badge from "@/components/Badge.astro"
+import DocumentIcon from "@/components/icons/Document.astro"
+import GitHubIcon from "@/components/icons/GitHub.astro"
 import LinkedInIcon from "@/components/icons/LinkedIn.astro"
 import MailIcon from "@/components/icons/Mail.astro"
 import SocialPill from "@/components/SocialPill.astro"
@@ -42,6 +44,14 @@ import SocialPill from "@/components/SocialPill.astro"
     <SocialPill href="https://www.linkedin.com/in/manuel-eduardo-cano-nesbet/">
       <LinkedInIcon class="size-4" />
       LinkedIn
+    </SocialPill>
+    <SocialPill href="/documents/CV_Actualizado_Septiembre_2025.pdf">
+      <DocumentIcon class="size-4" />
+      CV
+    </SocialPill>
+    <SocialPill href="https://github.com/Traukit0/">
+      <GitHubIcon class="size-4" />
+      GitHub
     </SocialPill>
   </nav>
 </div>
